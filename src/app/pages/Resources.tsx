@@ -1,106 +1,90 @@
-import { FileText, Download, BookOpen, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export function Resources() {
   return (
     <div className="bg-[#0f1f2e] min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-r from-[#0a1929] to-[#1a2f45]">
+      {/* Our Mission / Results */}
+      <section className="relative py-24 bg-gradient-to-r from-[#0a1929] to-[#1a2f45]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-6xl mb-6 text-white" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 700 }}>
-            Resources
+          <h1 className="text-5xl mb-6 text-white" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 700 }}>
+            Our Mission
           </h1>
-          <p className="text-xl text-[var(--champagne-gold)]">
-            Helpful Information for Property Owners and Board Members
+
+          <h2 className="text-3xl mb-4 text-[var(--champagne-gold)] uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
+            Results
+          </h2>
+
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            We measure our success by the tangible outcomes we deliver—enhanced property values, satisfied residents, and thriving communities. We listen closely to the needs and priorities of Board members to provide thoughtful, tailored solutions that support each community’s long-term success.
           </p>
         </div>
       </section>
 
-      {/* Resource Categories */}
-      <section className="py-24 bg-[#0f1f2e]">
+      {/* Our Services (selected highlights) */}
+      <section className="py-16 bg-[#0f1f2e]">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl mb-8 text-[var(--champagne-gold)] text-center" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
+            Our Services
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-black/40 to-[#1a2f45]/40 p-10 rounded-lg border border-[var(--champagne-gold)]/20">
+              <h3 className="text-2xl mb-3 text-white" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
+                Vendor & Contractor Management
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                We place a high priority on strategic vendor selection, contract negotiation, and performance monitoring. Our goal is to maximize value and ensure high quality while maintaining cost efficiency.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-black/40 to-[#1a2f45]/40 p-10 rounded-lg border border-[var(--champagne-gold)]/20">
+              <h3 className="text-2xl mb-3 text-white" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
+                Meeting Coordination & Board Support
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                Our experience provides the structure, organization, and professionalism necessary to support board operations effectively. We help keep board meetings focused, efficient, and properly documented, allowing boards to make informed decisions and move forward with clarity and confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages Section (replaces earlier resource cards) */}
+      <section className="py-24 bg-gradient-to-r from-[#1a2f45] to-[#0a1929]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Resource Card 1 */}
-            <div className="bg-gradient-to-br from-black/40 to-[#1a2f45]/40 p-10 rounded-lg border border-[var(--champagne-gold)]/20 hover:border-[var(--champagne-gold)] transition-all">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[var(--champagne-gold)] rounded-full flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl mb-4 text-[var(--champagne-gold)]" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
-                    Board Member Guide
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Comprehensive guide for new and experienced board members covering responsibilities, best practices, and effective governance strategies.
-                  </p>
-                  <button className="text-[var(--champagne-gold)] hover:text-white transition-colors flex items-center gap-2">
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </button>
-                </div>
-              </div>
+          <h2 className="text-4xl mb-8 text-[var(--champagne-gold)] text-center" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
+            Advantages of partnering with Baretto Property Management
+          </h2>
+
+          <div className="space-y-6 text-gray-300">
+            <div>
+              <strong className="text-white">Boutique Industry Expertise:</strong>
+              <p className="mt-2">At Baretto Property Management, we provide personalized guidance and industry best practices tailored to the unique needs of each community we serve. Our hands-on approach allows boards to operate with confidence, efficiency, and strategic direction.</p>
             </div>
 
-            {/* Resource Card 2 */}
-            <div className="bg-gradient-to-br from-black/40 to-[#1a2f45]/40 p-10 rounded-lg border border-[var(--champagne-gold)]/20 hover:border-[var(--champagne-gold)] transition-all">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[var(--champagne-gold)] rounded-full flex items-center justify-center flex-shrink-0">
-                  <BookOpen className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl mb-4 text-[var(--champagne-gold)]" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
-                    Florida HOA Laws
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Essential information about Florida statutes governing homeowners associations, condominium associations, and cooperative housing.
-                  </p>
-                  <button className="text-[var(--champagne-gold)] hover:text-white transition-colors flex items-center gap-2">
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </button>
-                </div>
-              </div>
+            <div>
+              <strong className="text-white">Dedicated Professional Support:</strong>
+              <p className="mt-2">We deliver comprehensive operational support through a team of experienced professionals while managing all human resources responsibilities, including payroll, recruitment, training, and insurance. We also work collaboratively with existing on-site staff when continuity is important to the Association.</p>
             </div>
 
-            {/* Resource Card 3 */}
-            <div className="bg-gradient-to-br from-black/40 to-[#1a2f45]/40 p-10 rounded-lg border border-[var(--champagne-gold)]/20 hover:border-[var(--champagne-gold)] transition-all">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[var(--champagne-gold)] rounded-full flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl mb-4 text-[var(--champagne-gold)]" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
-                    Hurricane Preparedness
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Complete hurricane readiness checklist and emergency procedures for South Florida coastal communities.
-                  </p>
-                  <button className="text-[var(--champagne-gold)] hover:text-white transition-colors flex items-center gap-2">
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </button>
-                </div>
-              </div>
+            <div>
+              <strong className="text-white">Regulatory Compliance:</strong>
+              <p className="mt-2">Our team helps ensure Associations remain compliant with Florida’s evolving condominium and HOA regulations by supporting proper governance, documentation, and operational procedures.</p>
             </div>
 
-            {/* Resource Card 4 */}
-            <div className="bg-gradient-to-br from-black/40 to-[#1a2f45]/40 p-10 rounded-lg border border-[var(--champagne-gold)]/20 hover:border-[var(--champagne-gold)] transition-all">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-[var(--champagne-gold)] rounded-full flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl mb-4 text-[var(--champagne-gold)]" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600 }}>
-                    Financial Best Practices
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Guidelines for budgeting, reserve planning, and financial oversight to ensure your community's fiscal health.
-                  </p>
-                  <button className="text-[var(--champagne-gold)] hover:text-white transition-colors flex items-center gap-2">
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </button>
-                </div>
-              </div>
+            <div>
+              <strong className="text-white">Modern Technology Solutions:</strong>
+              <p className="mt-2">Baretto Property Management provides modern communication and management tools designed to enhance resident engagement, streamline operations, facilitate online payments, improve security, and deliver transparent financial reporting.</p>
+            </div>
+
+            <div>
+              <strong className="text-white">24/7 Responsiveness:</strong>
+              <p className="mt-2">Our licensed management professionals are available around the clock to respond promptly and effectively to emergencies and urgent community matters, providing boards and residents with peace of mind.</p>
+            </div>
+
+            <div>
+              <strong className="text-white">Financial Oversight & Cost Efficiency:</strong>
+              <p className="mt-2">Through proactive oversight, trusted vendor partnerships, and market expertise, we identify meaningful cost-saving opportunities while maintaining a high standard of service and protecting the long-term value of the community.</p>
             </div>
           </div>
         </div>
